@@ -74,6 +74,11 @@ func (c *Cache) RemoveOldest() {
 }
 
 // Delete
-func (c Cache) Delete(key string) (bool, error) {
+func (c *Cache) Delete(key string) (bool, error) {
 	return false, nil
+}
+
+// length
+func (c *Cache) Len() int {
+	return c.list.Len()
 }
